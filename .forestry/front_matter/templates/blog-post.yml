@@ -20,3 +20,5 @@ fields:
   type: image_gallery
   config: {}
   label: Images
+pages:
+- pages/posts/testing-forestry.md
