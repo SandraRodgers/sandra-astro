@@ -18,6 +18,6 @@ file_template: ":filename:"
 build:
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
-  mount_path: "/srv"
-  working_dir: "/srv"
+  mount_path: "/dist"
+  working_dir: "/dist"
   instant_preview_command: astro develop
