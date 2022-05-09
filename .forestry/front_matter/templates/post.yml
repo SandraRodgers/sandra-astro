@@ -1,4 +1,34 @@
 ---
 label: Post
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+  description: Blog post title
+- name: main-text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: main-text
+  description: The body text of the blog post
+- name: date
+  type: datetime
+  label: date
+  description: Date of blog post
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: images
+  type: image_gallery
+  config: {}
+  label: images
+  description: Images for blog post
