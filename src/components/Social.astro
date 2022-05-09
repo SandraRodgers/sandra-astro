@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<section>
+  <div class="w-4/6 my-2 h-full ">
+    <div class="pl-8 py-1 flex flex-col justify-between">
+      <a
+        href="https://twitter.com/sandra_rodgers_"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Icon height="1.85rem" name="simple-icons:twitter" /></a
+      >
+      <a
+        href="https://github.com/SandraRodgers"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Icon height="1.85rem" name="simple-icons:github" /></a
+      >
+      <a
+        href="https://codepen.io/sandrarodgers"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Icon height="1.85rem" name="simple-icons:codepen" /></a
+      >
+      <a
+        href="https://www.linkedin.com/in/sandra-rodgers/"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Icon height="1.85rem" name="simple-icons:linkedin" /></a
+      >
+    </div>
+  </div>
+</section>
+
+<style>
+  [astro-icon] {
+    @apply text-secondary;
+    @apply text-lg;
+  }
+
+  a {
+    @apply my-2;
+  }
+</style>

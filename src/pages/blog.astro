@@ -1,0 +1,91 @@
+---
+import BlogPreview from "../components/BlogPreview.vue";
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+// Script:
+let title = "Blog";
+let description = "The perfect starter for your perfect blog.";
+
+// Data Fetching: List all Markdown posts in the repo.
+let allPosts = await Astro.glob("./posts/*.md");
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
+);
+---
+
+<html lang="en">
+  <body>
+    <SiteLayout title="Sandra">
+      <main class="content">
+        <div class="intro">
+          <h1 class="latest">{title}</h1>
+        </div>
+        <section aria-label="Blog post list">
+          <!-- <BlogPreview post={allPosts[0]} index={0} client:load /> -->
+          <!-- {allPosts.map((p, i) => <BlogPreview post={p} index={i} client:load />)} -->
+          <BlogPreview post={allPosts[0]} index={0} client:load />
+          <BlogPreview post={allPosts[1]} index={1} client:load />
+          <BlogPreview post={allPosts[2]} index={2} client:load />
+          <BlogPreview post={allPosts[3]} index={3} client:load />
+          <BlogPreview
+            post={allPosts[4]}
+            index={4}
+            client:load
+            class="scale-50 opacity-0 intersect:scale-100 intersect:opacity-100 transition duration-700"
+          />
+        </section>
+      </main>
+    </SiteLayout>
+  </body>
+  <script
+    defer
+    src="https://unpkg.com/tailwindcss-intersect@1.x.x/dist/observer.min.js"
+  ></script>
+</html>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr;
+  }
+
+  header {
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-bg-offset);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    /* margin-top: 4rem; */
+    /* max-width: 100%; */
+    margin-bottom: 8rem;
+  }
+
+  /* .content :global(main > * + *) {
+margin-top: 1rem;
+} */
+
+  .intro {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid var(--theme-divider);
+  }
+
+  .intro > * {
+    margin: 0;
+  }
+
+  .latest {
+    font-size: 5.5rem;
+    font-weight: 700;
+  }
+
+  .title {
+  }
+</style>
