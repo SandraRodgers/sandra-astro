@@ -21,4 +21,4 @@ build:
   preview_docker_image: forestryio/node:12
   mount_path: "/"
   working_dir: "/src"
-  instant_preview_command: astro develop
+  instant_preview_command: npm run develop
