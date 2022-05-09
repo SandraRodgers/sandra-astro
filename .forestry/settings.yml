@@ -4,7 +4,6 @@ auto_deploy: false
 admin_path:
 webhook_url:
 sections:
-<<<<<<< HEAD
   - type: directory
     path: pages/posts
     label: Posts
@@ -14,17 +13,6 @@ sections:
 upload_dir: public
 public_path: "/public"
 front_matter_path: ""
-=======
-- type: directory
-  path: posts
-  label: Posts
-  create: all
-  match: "**/*"
-  new_doc_ext: md
-upload_dir: uploads
-public_path: "/uploads"
-front_matter_path: ''
->>>>>>> e4e1f2945e1c907a3f0944d40fdd866abca9d17a
 use_front_matter_path: false
 file_template: ":filename:"
 build:
