@@ -20,5 +20,5 @@ build:
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
   mount_path: "/dist/"
-  working_dir: "/src"
+  working_dir: "/"
   instant_preview_command: npm run develop
