@@ -32,3 +32,5 @@ fields:
   config: {}
   label: images
   description: Images for blog post
+pages:
+- sandra-astro/src/pages/posts/testing-forestry.md
