@@ -21,4 +21,4 @@ fields:
   config: {}
   label: Images
 pages:
-- pages/posts/testing-forestry.md
+- src/pages/posts/forestry-test.md
