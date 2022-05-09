@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "watch": "astro preview"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.1",
