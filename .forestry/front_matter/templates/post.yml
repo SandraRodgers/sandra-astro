@@ -8,16 +8,6 @@ fields:
     required: false
   label: title
   description: Blog post title
-- name: main-text
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: main-text
-  description: The body text of the blog post
 - name: date
   type: datetime
   label: date

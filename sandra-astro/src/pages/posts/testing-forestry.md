@@ -7,3 +7,4 @@ images:
 - "/uploads/fuji2.jpeg"
 
 ---
+This is a blog post. This is the text editor in Forestry.
