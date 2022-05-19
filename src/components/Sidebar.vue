@@ -1,11 +1,13 @@
 <template>
-  <div v-for="(link, i) in links" :key="i" class="w-4/6 my-2">
-    <div
-      :class="{ highlight: selectedLink === `/${link.toLowerCase()}` }"
-      class="pl-8 py-1"
+  <div
+    v-for="(link, i) in links"
+    :key="i"
+    class="w-full mt-2 py-2 mb-6"
+    :class="{ highlight: selectedLink === `/${link.toLowerCase()}` }"
+  >
+    <a class="pl-24 py-1 w-full" :href="'/' + link.toLowerCase()">
+      {{ link }}</a
     >
-      <a :href="'/' + link.toLowerCase()"> {{ link }}</a>
-    </div>
   </div>
 </template>
 

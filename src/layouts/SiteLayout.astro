@@ -23,7 +23,7 @@ const { title } = Astro.props as Props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Karla:wght@600&family=Lato:wght@300&family=Roboto+Mono:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Karla:wght@400&family=Lato:wght@300&family=Roboto+Mono:wght@300&display=swap"
       rel="stylesheet"
     />
     <title>{title}</title>
@@ -53,13 +53,13 @@ const { title } = Astro.props as Props;
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 1.875rem;
 
-    --color-text: hsl(12, 5%, 4%);
-    --color-bg: hsl(0, 0%, 100%);
+    --color-text: rgb(208, 194, 229);
+    --color-bg: rgb(0, 0, 0);
     --font-main: "Lato", sans-serif;
   }
 
   html {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-lg);
     color: var(--color-text);
     background-color: var(--color-bg);
     font-family: var(--font-main);
@@ -69,7 +69,8 @@ const { title } = Astro.props as Props;
     margin: 0;
   }
   :global(p, a) {
-    font-family: "Lato", sans-serif;
+    font-family: "Karla", sans-serif;
+    font-size: var(--font-size-xl);
   }
   :global(h1) {
     font-family: "Lato", sans-serif;
@@ -105,6 +106,8 @@ const { title } = Astro.props as Props;
     left: 0;
     height: 90%;
     z-index: -1;
-    /* filter: drop-shadow(16px 16px 20px #ea7051); */
+    background-color: black;
+    /* filter: invert(99%) sepia(56%) saturate(1629%) hue-rotate(325deg)
+      brightness(90%) contrast(95%); */
   }
 </style>
